@@ -277,9 +277,9 @@ You should now see the following:
 
 ![Architecture Overview](/images/wk2-wcs-workspaces-dialog-add-input.png)
 
-3. Type **Greetings** as the name of the node. If bot recognize should be **"#Greeting"**. The Response condition should be set to "True", by clicking on the **Add response condition** button. You can provide any response text you like. It should look similar to the following:
+3. Type **Greetings** as the name of the node. "If bot recognizes" should be **"#Greeting"**. The Response condition should be set to "True", by clicking on the **Add response condition** button. You can provide any response text you like. It should look similar to the following:
 
-![Architecture Overview](/images/wk2-wcs-workspaces-dialog-node-greeting.png)
+![Architecture Overview](/images/wk2-wcs-workspaces-dialog-node-greeting2.png)
 
 You can click the **green X** in the upper right to close the dialog node editor.
 
