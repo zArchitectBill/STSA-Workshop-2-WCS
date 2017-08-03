@@ -281,7 +281,7 @@ You should now see the following:
 
 ![Architecture Overview](/images/wk2-wcs-workspaces-dialog-node-greeting2.png)
 
-You can click the **green X** in the upper right to close the dialog node editor.
+You can click the **X** in the upper right to close the dialog node editor.
 
 4. Again create another root node by clicking on the **"Greetings"** node and then clicking **"Add node"**. This will add another node. This node's values are as follows:
 
@@ -385,7 +385,7 @@ Then click on the **Open JSON Editor** menu item.
 
 ![Architecture Overview](/images/wk2-wcs-workspaces-dialog-node-temperature-json-pulldown.png)
 
-23. We are going to add a single line of code to the JSON. The purpose of this code, is to send a signal to the NodeRed application that some special processing needs to occur. So for Watson to respond to the **degree:Celsius** entity,request we need to have a new attribute on the JSON object. Type **"action": "CurrentTempCelsius"** make sure you put the **"comma"** right after the curly bracket, but before the new code you just added.
+23. We are going to add a single line of code to the JSON. The purpose of this code, is to send a signal to the NodeRed application that some special processing needs to occur. So for Watson to respond to the **degree:Celsius** entity request, we need to have a new attribute on the JSON object. Type **"action": "CurrentTempCelsius"** make sure you put the **"comma"** right after the curly bracket, but before the new code you just added.
 
 ![Architecture Overview](/images/wk2-wcs-workspaces-dialog-node-temperature-json-celsius.png)
 
@@ -411,7 +411,7 @@ What might become obvious is that the responses from WCS are static. There is no
 Because of this we need to add a layer in front of WCS to take the responses and make them personalized. We are going to use NodeRed, like we did for the IoT lab.
 Below are the steps needed for adding a new flow to your existing **BlueMix NodeRed** application.
 
-1. Open your browser and go to the BlubMix NodeRed URL. It should be something like STSAWorkshops-xx.mybluemix.net. You can also get to it from your BlueMix Dashboard.
+1. Open your browser and go to the BlueMix NodeRed URL. It should be something like STSAWorkshops-xx.mybluemix.net. You can also get to it from your BlueMix Dashboard.
 2. Login to your NodeRed Editor
 
 	![Architecture Overview](/images/wk2-nodered-logon.png)
@@ -439,17 +439,17 @@ Below are the steps needed for adding a new flow to your existing **BlueMix Node
 
 Now we need to update a couple of the nodes, with information that was provided earlier in IoT Workshop.
 
-1. Make sure you have the credentials information from your DashDB service. This can be access from your **BlueMix dashboard**, by clicking on the service:
+1. Make sure you have the credentials information from your Db2 Warehouse on Cloud service. This can be access from your **BlueMix dashboard**, by clicking on the service:
 
-![Iot Flow](/images/wk2-bluemix-dashboard-dashdb.png)
+![Iot Flow](/images/wk2-bluemix-dashboard-dashdb2.png)
 
-You should see the manage page for that instance of the dashDB service
+You should see the manage page for that instance of the Db2 Warehouse on Cloud service
 
-![Iot Flow](/images/wk2-bluemix-dashdb-manage.png)
+![Iot Flow](/images/wk2-bluemix-dashdb-manage2.png)
 
-Now click on the Service Credentials link on the left side. Once the page loads, there is an option for **View Credentials**.  You will need to copy the **HostName, Username and Password** in the next step.
+Now click on the Service Credentials link on the left side. Once the page loads, there is an option for **View Credentials**.  You will need to copy the **HostName, Username and Password** in the next step. (NOTE: If you don't have any credentials in that list, click "New credential" and create a set of credentials, then copy the username and password from the newly-created credential)
 
-![Iot Flow](/images/wk2-bluemix-dashdb-credentials.png)
+![Iot Flow](/images/wk2-bluemix-dashdb-credentials2.png)
 
 2. Now go back to NodeRed and make sure you are in the **WCS flow**.
 
@@ -467,7 +467,7 @@ Once you fill in the values it should look similar to:
 
 Click the **update** button then click on the **Done** button. Your dashDB node should now have the proper information to connect to the service instance.
 
-3. Now double click on the **IoT Change Color** node.
+3. Now double click on the **IoT ColorChange** node.
 
 ![Iot Flow](/images/wk2-nodered-flow-wcs-iotdb.png)
 
